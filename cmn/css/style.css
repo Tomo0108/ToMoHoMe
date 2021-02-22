@@ -1,80 +1,100 @@
 @charset "utf-8";
-
 a {
   text-decoration: none;
   color: #7e7e7e;
-  
 }
-.container {
-  max-width: 1160px;
-  padding: 0 45px;
-  margin: 0 auto;
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
-
-/* ヘッダー */
-header {
-  background-color:rgba(255, 255, 255, 0.502);
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
+li {
+  list-style-type:none;
 }
-header > .container {
-  height: 150px;
-  display: flex;
-  align-items: center;
-  max-width: none;
-  padding: 0 60px
-}
-
-/* ロゴ */
-.area_logo_header .logo {
- display: block;
-}
-.area_logo_header img {
-  height: 90px;
-  vertical-align: bottom;
-}
-
-/* ヘッダーナビ */
-.nav_header {
-  margin: 0 0 0 auto
-}
-.list_nav_header {
-  display: flex;
-  align-items: center;
-  margin: 0 15px;
-}
-.list_nav_header > li {
-
-  list-style: none;
-  font-family: futura-pt, sans-serif;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 25px;
-  padding: 0 15px;                                  
-}
-.list_nav_header > a {
+a {
+  position: relative;
+  display: inline-block;
   text-decoration: none;
 }
-/* トップ画面　*/
-.area_top_view {
-  background: url(../img/bg_night.gif) no-repeat bottom center;
-  background-size: cover;
-  background-position: center;
+a::after {
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #333;
+  opacity: 0;
+  visibility: hidden;
+  transition: .3s;
 }
-.area_top_view > .container {
-  height: 1000px;
+a:hover::after {
+  bottom: -4px;
+  opacity: 1;
+  visibility: visible;
+}
+
+body{
+	background: #edededee;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 25px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  flex-flow: column;
+  min-height: 100vh;
+
+}
+.site_header{
+	background: #5c7a888a, #FFF;
+	display: flex;
+	padding: 20px 40px;
+	justify-content: space-between;
+  width: 100%;
+  z-index: 99;
+  border-bottom: solid 5px #f0bd4fc1;
+}
+.site_logo img{
+	height: 75px;
+  width: auto;
+  top: 50%;
+  display: block;
+}
+.nav_menu{
+  display: flex;
+  margin: auto;
+  padding-top: 18px;
+}
+.nav_menu_item{
+  margin-left: 60px;
+}
+.nav_menu_item a{
+	color: rgb(57, 57, 57);
+  text-decoration: none;
+  font-family: 'Titillium Web', sans-serif;
+}
+.hero{
+  max-height: 700px;
+  width: 100%;
+  overflow: hidden;
+  display: inline-block;
+}
+.hero img{
+  height: auto;
+	width: 100%;
+}
+.text{
+  padding-left: 30px;
+  background-image: url(../img/bg_about.png);
+
+  
 }
 
 .copyright {
-  font: 300 14px/1em 'futura PT','noto sans japanese',sans-serif;
+  font-size: 15px;
+  font-family: 'Titillium Web', sans-serif;
   font-style: normal;
   font-weight: 300;
   margin: 10px 0 0;
   text-align: center;
+  bottom:0; left: 0; right: 0;
+  flex: 1;
 }
