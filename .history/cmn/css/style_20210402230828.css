@@ -59,11 +59,10 @@ body {
   top: 50%;
   display: block;
 }
-.nav_menu {
-  font-size: 120%;
+.nav_menu{
   display: flex;
-  padding-top: 18px;
   margin: auto;
+  padding-top: 18px;
 }
 .nav_menu_item{
   margin-left: 60px;
