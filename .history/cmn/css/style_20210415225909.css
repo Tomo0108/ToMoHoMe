@@ -107,15 +107,9 @@ body {
 .row-intro {
   max-width: 1320px;
   width: 100%;
-  background-color: rgba(52, 221, 240, 0.967);
-  margin: 60px auto;
+  background-color: rgba(94, 226, 240, 0.817);
+  margin: 0px auto;
   border-radius: 10px;
-}
-.li-intro {
-  text-align: center;
-  padding: 15px;
-  font-size: 70%;
-  color: #FFF;
 }
 .text{
  width: auto;
@@ -157,10 +151,7 @@ h4 {
     font-size: 80%;
     color: rgb(177, 65, 65);
 }
-.conclusion {
-  font-size: 80%;
-  color: rgb(23, 67, 177);
-}
+.conclusion
 .copyright {
   font-size: 15px;
   font-family: 'Titillium Web', sans-serif;
